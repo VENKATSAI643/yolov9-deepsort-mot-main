@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f9;
+      }
+      .container {
+        text-align: center;
+        background-color: #fff;
+        padding: 30px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      h1 {
+        color: #1976d2;
+        margin-bottom: 20px;
+      }
+      .upload-box {
+        margin: 20px 0;
+      }
+      input[type="file"] {
+        margin: 10px 0;
+      }
+      button {
+        background-color: #1976d2;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      button:hover {
+        background-color: #145da0;
+      }
+      .footer-text {
+        margin-top: 20px;
+        color: #555;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload Video</h1>
+      <form method="post" action="{{ url_for('upload_file') }}" enctype="multipart/form-data">
+        <div class="upload-box">
+          <input type="file" name="file" accept="video/*" required>
+        </div>
+        <div>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+      <div class="footer-text">Track multiple objects</div>
+    </div>
+  </body>
+</html>

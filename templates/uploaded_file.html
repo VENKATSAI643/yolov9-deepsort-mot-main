@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Processed Video</title>
+  </head>
+  <body>
+    <h1>Processed Video</h1>
+    <video width="640" height="480" controls>
+      <source src="{{ url_for('uploaded_file', folder=folder, filename=filename) }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
